@@ -38,7 +38,9 @@ body {
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
-
+.nav-text{
+    text-decoration-color: black;
+}
 
 .row {
     max-width: 1140px;
@@ -202,7 +204,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero2.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height:80vh;
     background-attachment: fixed;
 }
 
@@ -217,11 +219,12 @@ header {
 }
 
 .logo {
-    height: 100px;
+    height: 80px;
     width: auto;
     float: left;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 50px;
+    margin-bottom: 10px;
 }
 
 .logo-black { 
