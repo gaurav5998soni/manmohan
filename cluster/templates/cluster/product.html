@@ -11,15 +11,15 @@
             <div class="row js--wp-3">
                 <div class="col span-1-of-1 ">
                     <div class="product-box">
+                        <div class="col span-1-of-2">
                         <img src="{{ product.p_product_img.url }}" alt="{{product.p_title}}" height="200" width="200">
-                        <h3>{{product.p_title}}</h3>
-                        <div class="city-feature">
-                            <i class="ion-ios-person icon-small"></i>
-                            detail1
                         </div>
-                        <div class="city-feature">
-                            <i class="ion-ios-star icon-small"></i>
-                            detail2
+                        <div class="col span-1-of-2">
+                            <h3>{{product.p_title}}</h3>
+
+                            <a class="long-copy">
+                                {{product.p_description}}
+                            </a>
                         </div>
                         {% if user.is_authenticated%}
                         <a class="btn btn-full" href="{% url 'delete_product' product.id %}">Delete</a>

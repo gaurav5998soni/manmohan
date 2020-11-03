@@ -150,18 +150,11 @@ diversification
                 {% for product in Products%}
                 <div class="col span-1-of-4 ">
                     <img src="{{ product.p_product_img.url }}" alt="{{product.p_title}}" height="200" width="200">
-                        <h3>{{product.p_title}}</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
+                    <div  class="product_title_index">
+                    <h3>{{product.p_title}}</h3>
                     </div>
                     <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
+                       <a href="{% url 'product' product.id %}">show more</a>
                     </div>
                 </div>
                 {% endfor %}

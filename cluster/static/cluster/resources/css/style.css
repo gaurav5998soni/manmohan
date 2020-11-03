@@ -718,7 +718,14 @@ color: #555;
 .box a:hover{
 color: #e67e22;
 }
-
+/*----------------product------------*/
+.product_title_index h3{
+text-align: left;
+}
+.product-box img {
+ height: auto;
+ width: 100%;
+}
 
 /* ----------------------------------------------- */
 /* Animations */
