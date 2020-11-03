@@ -1,0 +1,22 @@
+{% extends 'cluster/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+ <section class="section-features js--section-features" id="features">
+     <div class="row">
+         {% for article in articles %}
+         <div class="article-box">
+            <a href="{% url 'article' article.id %}">
+
+                <h2>{{article.a_title}}</h2>
+                <p class="long-copy">{{article.a_description}}</p>
+                <br>
+                <p class="date_para">Posted on: {{article.a_date|date}}</p>
+                <hr>
+            </a>
+         </div>
+         {% endfor %}
+     </div>
+ </section>
+{% endblock %}

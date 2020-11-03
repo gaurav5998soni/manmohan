@@ -2,15 +2,17 @@
 {% load static %}
 
 {% block body_block %}
-<div style="background-color: grey; ">{% include 'cluster/header.html' %}</div>
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
  <section class="section-cities" id="cities">
             <div class="row">
                 <h2>Our creative products</h2>
             </div>
+
             <div class="row js--wp-3">
+                {% for product in products %}
                 <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/BELLGADI.jpeg' %}" alt="Lisbon">
-                    <h3>product1</h3>
+                    <img src="{{ product.p_product_img.url }}" alt="{{product.p_title}}">
+                    <h3>{{product.p_title}}</h3>
                     <div class="city-feature">
                         <i class="ion-ios-person icon-small"></i>
                         detail1
@@ -21,89 +23,11 @@
                     </div>
                     <div class="city-feature">
                         <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
+                        <a href="{% url 'product' product.id %}">more</a>
                     </div>
                 </div>
-                <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/product3.jpg' %}" alt="San Francisco">
-                    <h3>product2</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
-                    </div>
+                {% endfor %}
                 </div>
-                <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/product2.jpg' %}" alt="Berlin">
-                    <h3>product3</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
-                    </div>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/product1.jpg' %}" alt="London">
-                    <h3>product4</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
-                    </div>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/BELLGADI.jpeg' %}" alt="Lisbon">
-                    <h3>product1</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
-                    </div>
-                </div><div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/BELLGADI.jpeg' %}" alt="Lisbon">
-                    <h3>product1</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
-                    </div>
-                </div>
-            </div>
             
         </section>
 }

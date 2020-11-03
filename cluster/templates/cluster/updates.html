@@ -1,0 +1,116 @@
+{% extends 'cluster/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+{% if user.is_authenticated %}
+{% if messages %}
+    <div class="row">
+        <div class="message-box">
+            {% for message in messages%}
+            <h4>{{message}}</h4>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+<section class="section-form">
+            <div class="row">
+                <h2>Article Updates</h2>
+            </div>
+            <div class="row">
+                <form method="POST" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="a_title">Title</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="a_title" id="a_title" placeholder="title" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="a_description">Description</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="a_description" id="a_description" placeholder="description" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Update">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+</section>
+<section class="section-form">
+
+            <div class="row">
+                <h2>Product Updates</h2>
+            </div>
+            <div class="row">
+                <form method="POST" enctype="multipart/form-data" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="p_title">Title</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="p_title" id="p_title" placeholder="product name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="p_description">Description</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="p_description" id="p_description" placeholder="product description" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="p_product_img">Image</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="file" name="p_product_img" id="p_product_img" >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Update">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+</section>
+{% else %}
+    <div class="row updates">
+        <h2>Oops! something went wrong.</h2>
+
+
+        <h2>Note</h2>
+        <h2>Require additional permission to access this page.</h2>
+        <h2>-Team Bamboo Craft Cluster</h2>
+            <p class="long-copy">
+            This page is accessible to team cluster. You need permission to access or manage site.
+            We would like you to please check below links according to your correspondance.
+
+        </p>
+
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

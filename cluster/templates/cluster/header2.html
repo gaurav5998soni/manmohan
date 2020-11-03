@@ -7,10 +7,11 @@
         </a>
         <img src="{% static 'cluster/resources/img/logo.png' %}" alt="Bamboo Craft Cluster logo" class="logo-black">
         <ul class="main-nav js--main-nav">
-            <li><a href="#features">Cluster</a></li>
-            <li><a href="#works">Our aim</a></li>
-            <li><a href="#cities">Our products</a></li>
-            <li><a href="#plans">About us</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'products' %}">Our products</a></li>
+            {%if user.is_authenticated%}
+            <li><a href="{%url 'logout'%}">Logout</a></li>
+            {% endif %}
         </ul>
         <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
     </div>

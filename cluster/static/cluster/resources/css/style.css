@@ -25,6 +25,10 @@ body {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
+hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
 
 .clearfix {zoom: 1;}
 .clearfix:after {
@@ -58,7 +62,8 @@ section {
 /* ----- HEADINGS ----- */
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -82,6 +87,12 @@ h2 {
 
 h3 {
     font-size: 110%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+h4 {
+    text-align: center;
+    font-size: 80%;
     margin-bottom: 15px;
 }
 
@@ -101,6 +112,7 @@ h2:after {
     width: 70%;
     margin-left: 15%;
 }
+
 
 .box p {
     font-size: 90%;
@@ -315,33 +327,33 @@ header {
 /* MEALS */
 /* ----------------------------------------------- */
 
-.section-meals {
+.section-clusters {
     padding: 0;
 }
-.section-meals .long-copy {
+.section-clusters .long-copy {
     margin-bottom: 30px;
 }
 
-.meals-showcase {
+.clusters-showcase {
     list-style: none;
     width: 100%;
 }
 
-.meals-showcase li {
+.clusters-showcase li {
     display: block;
     float: left;
     width: 25%;
 
 }
 
-.meal-photo {
+.cluster-photo {
     width: 100%;
     margin: 0;
     overflow: hidden;
     background-color: #000;
 }
 
-.meal-photo img {
+.cluster-photo img {
     opacity: 0.7;
     width: 100%;
     height: auto;
@@ -352,7 +364,7 @@ header {
     transition: transform 0.5s, opacity 0.5s;
 }
 
-.meal-photo img:hover {
+.cluster-photo img:hover {
     opacity: 1;
     -webkit-transform: scale(1.03);
     -ms-transform: scale(1.03);
@@ -482,6 +494,7 @@ cite img {
 }
 
 
+
 /* ----------------------------------------------- */
 /* SIGN UP */
 /* ----------------------------------------------- */
@@ -551,6 +564,7 @@ cite img {
 
 input[type=text],
 input[type=email],
+input[type=password],
 select,
 textarea {
     width: 100%;
@@ -653,7 +667,54 @@ footer p {
     margin-top: 20px;
 }
 
+/*--------------updates page------------*/
+.updates {
+    margin-top: 20px;
+    margin-bottom:20px;
+}
 
+.message-box {
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.message-box h4{
+    color: red;
+    margin:auto;
+    align: center;
+}
+/*----------------article------------*/
+.date_para {
+    text-align: right;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.article-box {
+    padding-bottom: 10px;
+}
+
+.article-box a:link,
+.article-box a:visited{
+color: #555;
+}
+
+.article-box a:active,
+.article-box a:hover{
+color: #e67e22;
+}
+
+.box a:link,
+.box a:visited{
+color: #555;
+}
+
+.box a:active,
+.box a:hover{
+color: #e67e22;
+}
 
 
 /* ----------------------------------------------- */

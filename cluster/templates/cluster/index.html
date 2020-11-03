@@ -8,9 +8,9 @@
 
 <div class="hero-text-box">
                 <h1>"Bamboo Craft Cluster"</h1>
-                <a class="btn btn-full js--scroll-to-plans" href="#">Explore</a>
-                <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
-            </div>
+                <a class="btn btn-full js--scroll-to-start" href="#">Explore us</a>
+                <a class="btn btn-ghost js--scroll-to-plans" href="#">Know more</a>
+</div>
             
         
         
@@ -25,84 +25,88 @@ various sizes and clay idols. In the last year or two, IA has been working with 
 artisans to expand their product range (bamboo furniture, murals, wall
 hangings, lampshades, ceramic-ware etc.)
                 </p>
+                <p class="long-copy">
+                    Cluster empower artisans and build their capacity to meet the challenges of the
+market and global competition in a sustainable and self-reliant manner.
+                </p>
+                <p class="long-copy">
+                    Cluster facilitate collectivization of artisans for procurement, production,
+marketing and other support activities to promote sustainable growth and
+diversification
+                </p>
             </div>
-            
+            <div class="row">
+                <h2>Recent Articles</h2>
+            </div>
             <div class="row js--wp-1">
+                {% for Article in Articles %}
                 <div class="col span-1-of-4 box">
-                    <i class="ion-ios-infinite-outline icon-big"></i>
-                    <h3>Up to 365 days/year</h3>
-                    <p>
-                        Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
-                    </p>
+                    <a href="{% url 'article' Article.id %}">
+                    <div>
+                        <h3>{{Article.a_title}}</h3>
+                        <p>{{Article.a_description|truncatechars:230}}</p>
+                        <p class="date_para">Posted on: {{Article.a_date|date}}</p>
+                    <hr>
+                    </div>
+                    </a>
                 </div>
-                <div class="col span-1-of-4 box">
-                    <i class="ion-ios-stopwatch-outline icon-big"></i>
-                    <h3>Ready in 20 minutes</h3>
-                    <p>
-                        You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
-                    </p>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <i class="ion-ios-nutrition-outline icon-big"></i>
-                    <h3>100% made in India</h3>
-                    <p>
-                        All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
-                    </p>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <i class="ion-ios-cart-outline icon-big"></i>
-                    <h3>Order anything</h3>
-                    <p>
-                        We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
-                    </p>
-                </div>
+                {% endfor %}
+            </div>
+                <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <a class="btn btn-full" href="{%url 'articles'%}">read more</a>
+                        </div>
+                    </div>
             </div>   
         </section>
         
-        <section class="section-meals">
+        <section class="section-clusters">
             <div class="row">
                 <h2>Top Products</h2>
             </div>
-            <ul class="meals-showcase clearfix">
+            <ul class="clusters-showcase clearfix">
                 <li>
-                    <figure class="meal-photo">
+                    <figure class="cluster-photo">
                         <img src="{% static 'cluster/resources/img/1.jpeg' %}" alt="Korean bibimbap with egg and vegetables">
                     </figure>
                 </li>
                 <li>
-                    <figure class="meal-photo">
+                    <figure class="cluster-photo">
                         <img src="{% static 'cluster/resources/img/2.jpeg' %}" alt="Simple italian pizza with cherry tomatoes">
                     </figure>
                 </li>
                 <li>
-                    <figure class="meal-photo">
+                    <figure class="cluster-photo">
                         <img src="{% static 'cluster/resources/img/3.jpeg' %}" alt="Chicken breast steak with vegetables">
                     </figure>
                 </li>
                 <li>
-                    <figure class="meal-photo">
+                    <figure class="cluster-photo">
                         <img src="{% static 'cluster/resources/img/4.jpeg' %}" alt="Autumn pumpkin soup">
                     </figure>
                 </li>
             </ul>
-            <ul class="meals-showcase clearfix">
+            <ul class="clusters-showcase clearfix">
                 <li>
-                    <figure class="meal-photo">
+                    <figure class="cluster-photo">
                         <img src="{% static 'cluster/resources/img/5.jpeg' %}" alt="Paleo beef steak with vegetables">
                     </figure>
                 </li>
                 <li>
-                    <figure class="meal-photo">
+                    <figure class="cluster-photo">
                         <img src="{% static 'cluster/resources/img/6.jpeg' %}" alt="Healthy baguette with egg and vegetables">
                     </figure>
                 </li>
                 <li>
-                    <figure class="meal-photo">
+                    <figure class="cluster-photo">
                         <img src="{% static 'cluster/resources/img/7.jpeg' %}" alt="Burger with cheddar and bacon">
                     </figure>
                 </li>
                 <li>
-                    <figure class="meal-photo">
+                    <figure class="cluster-photo">
                         <img src="{% static 'cluster/resources/img/8.jpeg' %}" alt="Granola with cherries and strawberries">
                     </figure>
                 </li>
@@ -143,9 +147,10 @@ hangings, lampshades, ceramic-ware etc.)
                 <h2>Our creative products</h2>
             </div>
             <div class="row js--wp-3">
+                {% for product in Products%}
                 <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/BELLGADI.jpeg' %}" alt="Lisbon">
-                    <h3>product1</h3>
+                    <img src="{{ product.p_product_img.url }}" alt="{{product.p_title}}">
+                        <h3>{{product.p_title}}</h3>
                     <div class="city-feature">
                         <i class="ion-ios-person icon-small"></i>
                         detail1
@@ -159,54 +164,15 @@ hangings, lampshades, ceramic-ware etc.)
                         <a href="#">more</a>
                     </div>
                 </div>
-                <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/product3.jpg' %}" alt="San Francisco">
-                    <h3>product2</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
+                {% endfor %}
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <a class="btn btn-full" href="{%url 'products'%}">more</a>
+                        </div>
                     </div>
-                    <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
-                    </div>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/product2.jpg' %}" alt="Berlin">
-                    <h3>product3</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
-                    </div>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <img src="{% static 'cluster/resources/img/product1.jpg' %}" alt="London">
-                    <h3>product4</h3>
-                    <div class="city-feature">
-                        <i class="ion-ios-person icon-small"></i>
-                        detail1
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-ios-star icon-small"></i>
-                        detail2
-                    </div>
-                    <div class="city-feature">
-                        <i class="ion-social-twitter icon-small"></i>
-                        <a href="#">more</a>
-                    </div>
-                </div>
             </div>
             
         </section>
@@ -236,6 +202,85 @@ hangings, lampshades, ceramic-ware etc.)
                 </div>
             </div>
         </section>
+    <section class="section-plans js--section-plans" id="plans">
+            <div class="row">
+                <h2>About us</h2>
+            </div>
+            <div class="row">
+                <div class="about-us-box">
+                    <h3>Bamboo Craft Cluster, Khalwa</h3>
+                    <h3>Khandwa (Madhya Pradesh)</h3>
+                    <br><br>
+                    <h4>Email: bamboocraftcluster@gmail.com</h4>
+                    <h4>Mobile: +91999999999</h4>
+                </div>
+            </div>
+        </section>
+
+        <!--<section class="section-form">-->
+            <!--<div class="row">-->
+                <!--<h2>We're happy to hear from you</h2>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<form method="post" action="#" class="contact-form">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label for="name">Name</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<input type="text" name="name" id="name" placeholder="Your name" required>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label for="email">Email</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<input type="email" name="email" id="email" placeholder="Your email" required>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label for="find-us">How did you find us?</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<select name="find-us" id="find-us">-->
+                                <!--<option value="friends" selected>Friends</option>-->
+                                <!--<option value="search">Search engine</option>-->
+                                <!--<option value="ad">Advertisement</option>-->
+                                <!--<option value="other">Other</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label>Newsletter?</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<input type="checkbox" name="news" id="news" checked> Yes, please-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label>Drop us a line</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<textarea name="message" placeholder="Your message"></textarea>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label>&nbsp;</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<input type="submit" value="Send it!">-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</form>-->
+
+            <!--</div>-->
+        <!--</section>-->
 {% endblock %}
         
         

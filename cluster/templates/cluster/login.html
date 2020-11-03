@@ -1,0 +1,52 @@
+{% extends 'cluster/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+{% if messages %}
+    <div class="row">
+        <div class="message-box">
+            {% for message in messages%}
+            <h4>{{message}}</h4>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+<section class="section-form">
+            <div class="row">
+                <h2>Login</h2>
+            </div>
+            <div class="row">
+                <form method="post" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="username">UserName</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="username" id="username" placeholder="username" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="password" name="password" id="password" placeholder="password" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Login">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+{% endblock %}
