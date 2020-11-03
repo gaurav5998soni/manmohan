@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block body_block %}
-<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+<div class="nav-bg">{% include 'cluster/header2.html' %}</div>
  <section class="section-cities" id="cities">
             <div class="row">
                 <h2>Our creative products</h2>
@@ -10,8 +10,8 @@
 
             <div class="row js--wp-3">
                 {% for product in products %}
-                <div class="col span-1-of-4 box">
-                    <img src="{{ product.p_product_img.url }}" alt="{{product.p_title}}">
+                <div class="col span-1-of-4 ">
+                    <img src="{{ product.p_product_img.url }}" alt="{{product.p_title}}" height="200" width="200">
                     <h3>{{product.p_title}}</h3>
                     <div class="city-feature">
                         <i class="ion-ios-person icon-small"></i>

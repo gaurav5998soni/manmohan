@@ -450,6 +450,9 @@ header {
     margin-bottom: 5px;
 }
 
+.nav-bg {
+    background-color: grey;
+}
 
 /* ----------------------------------------------- */
 /* TESTIMONIALS */
