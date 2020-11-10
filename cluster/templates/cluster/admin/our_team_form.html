@@ -1,0 +1,122 @@
+{% extends 'cluster/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+{% if user.is_authenticated %}
+{% if messages %}
+    <div class="row">
+        <div class="message-box">
+            {% for message in messages%}
+            <h4>{{message}}</h4>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+<section class="section-form">
+            <div class="row">
+                <h2>New Member</h2>
+            </div>
+            <div class="row">
+                <form method="POST" enctype="multipart/form-data" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="emp_id">Emp Id</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="emp_id" id="emp_id" value="{{object.emp_id}}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" value="{{object.name}}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="mobile">Mobile</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="mobile" id="mobile" value="{{object.mobile}}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" value="{{object.email}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="designation">Designation</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="designation" id="designation">
+                                <option value="{{object.designation}}" selected>{{object.designation}}</option>
+                                <option value="Artesian">Artesian</option>
+                                <option value="Other">Other</option>
+                                <!--<option value="other">Other</option>-->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="profile_img">Profile Picture</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="file" name="profile_img" id="profile_img" >
+                        </div>
+                    </div>
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label>Newsletter?</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<input type="checkbox" name="news" id="news" checked> Yes, please-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label>Drop us a line</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<textarea name="message" placeholder="Your message"></textarea>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Save Member">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+</section>
+{% else %}
+    <div class="row updates">
+        <h2>Oops! something went wrong.</h2>
+
+
+        <h2>Note</h2>
+        <h2>Require additional permission to access this page.</h2>
+        <h2>-Team Bamboo Craft Cluster</h2>
+            <p class="long-copy">
+            This page is accessible to team cluster. You need permission to access or manage site.
+            We would like you to please check below links according to your correspondance.
+
+        </p>
+
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

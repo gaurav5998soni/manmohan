@@ -1,0 +1,27 @@
+{% extends 'cluster/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+ <section class="section-features js--section-features" id="features">
+     <br>
+     <br>
+     <div class="row">
+         <h2>Responses</h2>
+     </div>
+     <br>
+     <div class="row">
+         {% for response in responses %}
+         <div class="response-box">
+                <h3>{{response.name}} ({{response.category}})</h3>
+                <p class="long-copy">{{response.message}}</p>
+                <br>
+                <p class="date_para">Mobile: {{response.mobile}}</p>
+                <p class="date_para">Posted on: {{response.date|date}}</p>
+                <p class="date_para">EMail: {{response.email}}</p>
+                <hr>
+         </div>
+         {% endfor %}
+     </div>
+ </section>
+{% endblock %}

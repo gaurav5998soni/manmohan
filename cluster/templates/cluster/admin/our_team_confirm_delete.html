@@ -1,0 +1,38 @@
+{% extends 'cluster/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+ <section class="section-form">
+
+            <div class="row">
+                <h2>Delete Confirmation</h2>
+            </div>
+     <div class="row js--wp-3">
+                <div class="col span-1-of-1 ">
+                    <div class="product-box">
+                        <div class="col span-1-of-2">
+                        <img src="{{ product.p_product_img.url }}" alt="{{product.p_title}}" height="200" width="200">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <form method="POST"class="contact-form">
+                    {% csrf_token %}
+
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Yes confirm">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+</section>
+{% endblock %}

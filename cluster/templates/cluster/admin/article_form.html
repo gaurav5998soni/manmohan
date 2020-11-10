@@ -1,0 +1,42 @@
+{% extends 'cluster/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+ <section class="section-form">
+            <div class="row">
+                <h2>Article Updates</h2>
+            </div>
+            <div class="row">
+                <form method="POST" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="a_title">Title</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="a_title" id="a_title" value="{{object.a_title}}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="a_description">Description</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="a_description" id="a_description" rows="10" required>{{object.a_description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Update">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+</section>
+{% endblock %}

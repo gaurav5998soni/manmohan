@@ -1,0 +1,95 @@
+{% extends 'cluster/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div style="background-color: grey; ">{% include 'cluster/header2.html' %}</div>
+{% if messages %}
+    <div class="row">
+        <div class="message-box">
+            {% for message in messages%}
+            <h4>{{message}}</h4>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+ <section class="section-form">
+
+            <div class="row">
+                 <div class="row">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="row">
+        <div class="about-us-box">
+            <h3>ManMohan Kala Samiti, Khalwa</h3>
+            <h3>Khandwa (Madhya Pradesh)</h3>
+        </div>
+                <form method="POST" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="mobile">Mobile</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="mobile" id="mobile" placeholder="Your mobile" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="category">You are?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="category" id="category">
+                                <option value="Customer" selected>Customer</option>
+                                <option value="Retailer">Retailer</option>
+                                <option value="Wholesaler">Wholesaler</option>
+                                <!--<option value="other">Other</option>-->
+                            </select>
+                        </div>
+                    </div>
+                    <!--<div class="row">-->
+                        <!--<div class="col span-1-of-3">-->
+                            <!--<label>Newsletter?</label>-->
+                        <!--</div>-->
+                        <!--<div class="col span-2-of-3">-->
+                            <!--<input type="checkbox" name="news" id="news" checked> Yes, please-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Drop us a line</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send us!">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+{% endblock %}

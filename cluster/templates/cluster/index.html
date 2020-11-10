@@ -8,8 +8,8 @@
 
 <div class="hero-text-box">
                 <h1>"Bamboo Craft Cluster"</h1>
-                <a class="btn btn-full js--scroll-to-start" href="#">Explore us</a>
-                <a class="btn btn-ghost js--scroll-to-plans" href="#">Know more</a>
+                <a class="btn btn-full" href="{% url 'support_us' %}">Support us</a>
+                <a class="btn btn-ghost js--scroll-to-start" href="#">Know more</a>
 </div>
             
         
@@ -35,12 +35,12 @@ marketing and other support activities to promote sustainable growth and
 diversification
                 </p>
             </div>
-            <div class="row">
+            <div class="row" id="articles">
                 <h2>Recent Articles</h2>
             </div>
             <div class="row js--wp-1">
                 {% for Article in Articles %}
-                <div class="col span-1-of-4 box">
+                <div class="col span-1-of-3 box">
                     <a href="{% url 'article' Article.id %}">
                     <div>
                         <h3>{{Article.a_title}}</h3>
@@ -57,7 +57,7 @@ diversification
                             <label>&nbsp;</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <a class="btn btn-full" href="{%url 'articles'%}">read more</a>
+                            <a class="btn btn-full" href="{%url 'articles'%}">More Articles</a>
                         </div>
                     </div>
             </div>   
@@ -154,7 +154,7 @@ diversification
                     <h3>{{product.p_title}}</h3>
                     </div>
                     <div class="city-feature">
-                       <a href="{% url 'product' product.id %}">show more</a>
+                       <a href="{% url 'product' product.id %}">More Details</a>
                     </div>
                 </div>
                 {% endfor %}
@@ -163,7 +163,7 @@ diversification
                             <label>&nbsp;</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <a class="btn btn-full" href="{%url 'products'%}">more</a>
+                            <a class="btn btn-full" href="{%url 'products'%}">More Products</a>
                         </div>
                     </div>
             </div>
