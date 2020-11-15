@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa4aec6a-b650-4b21-b52e-94da9cd16e05" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cluster/templates/cluster/logout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/static/cluster/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/static/cluster/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/admin/our_team.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/admin/our_team.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/header2.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/header2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/admin/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/admin/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/templates/cluster/updates.html" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/templates/cluster/admin/updates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cluster/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster_project/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -136,36 +123,37 @@
     <session id="-1069426175">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.46" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="638" />
-          <entry key="html" value="2761" />
-          <entry key="py" value="3045" />
+          <entry key="html" value="2886" />
+          <entry key="py" value="3055" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="638" />
-          <entry key="HTML" value="2761" />
-          <entry key="Python" value="3045" />
+          <entry key="HTML" value="2886" />
+          <entry key="Python" value="3055" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="5" />
-          <entry key="html" value="45" />
+          <entry key="html" value="46" />
           <entry key="js" value="1" />
           <entry key="py" value="17" />
           <entry key="rnc" value="1" />
@@ -174,7 +162,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="5" />
-          <entry key="HTML" value="45" />
+          <entry key="HTML" value="46" />
           <entry key="JavaScript" value="1" />
           <entry key="Python" value="17" />
           <entry key="RNG Compact" value="1" />
@@ -187,24 +175,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cluster/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+            <state relative-caret-position="720">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
               <folding>
-                <element signature="e#0#64#0" expanded="true" />
-                <marker date="1604989424652" expanded="true" signature="717:718" ph="..." />
-                <marker date="1604989424652" expanded="true" signature="2561:2563" ph="..." />
-                <marker date="1604989424652" expanded="true" signature="3731:4115" ph="..." />
-                <marker date="1604989424652" expanded="true" signature="6277:6279" ph="..." />
+                <marker date="1605445745193" expanded="true" signature="6939:6941" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/help_us.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="5" selection-end-line="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -212,17 +187,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/contact_us.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="576">
               <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="14" selection-end-column="68" />
+            <state relative-caret-position="408">
+              <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -240,10 +215,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/logout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="52" column="56" lean-forward="true" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+            <state relative-caret-position="54">
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -251,13 +235,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="152" column="22" lean-forward="true" selection-start-line="152" selection-start-column="20" selection-end-line="154" selection-end-column="26" />
+            <state relative-caret-position="3648">
+              <caret line="152" column="22" selection-start-line="152" selection-start-column="20" selection-end-line="154" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/products.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -278,8 +262,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/header2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="408">
+              <caret line="17" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -328,14 +312,15 @@
         <option value="$PROJECT_DIR$/cluster/models.py" />
         <option value="$PROJECT_DIR$/cluster/templates/cluster/admin/add_member.html" />
         <option value="$PROJECT_DIR$/cluster/templates/cluster/admin/our_team.html" />
-        <option value="$PROJECT_DIR$/cluster/templates/cluster/base.html" />
-        <option value="$PROJECT_DIR$/cluster/templates/cluster/header.html" />
         <option value="$PROJECT_DIR$/cluster/templates/cluster/contact_us.html" />
-        <option value="$PROJECT_DIR$/cluster/templates/cluster/header2.html" />
         <option value="$PROJECT_DIR$/cluster/templates/cluster/index.html" />
-        <option value="$PROJECT_DIR$/cluster/views.py" />
         <option value="$PROJECT_DIR$/cluster/urls.py" />
         <option value="$PROJECT_DIR$/cluster/templates/cluster/products.html" />
+        <option value="$PROJECT_DIR$/cluster/views.py" />
+        <option value="$PROJECT_DIR$/cluster/templates/cluster/logout.html" />
+        <option value="$PROJECT_DIR$/cluster/templates/cluster/base.html" />
+        <option value="$PROJECT_DIR$/cluster/templates/cluster/header2.html" />
+        <option value="$PROJECT_DIR$/cluster/templates/cluster/header.html" />
       </list>
     </option>
   </component>
@@ -390,6 +375,14 @@
               <item name="cluster" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="cluster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bamcluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bamcluster" type="462c0819:PsiDirectoryNode" />
+              <item name="cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bamcluster" type="b2602c69:ProjectViewProjectNode" />
@@ -492,7 +485,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -522,7 +515,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/product_images/5.jpeg" />
     <entry file="file://$PROJECT_DIR$/cluster/static/cluster/resources/img/back-customers.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -689,26 +681,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/user/urls.py" />
+    <entry file="file://$PROJECT_DIR$/user/views.py" />
     <entry file="file://$PROJECT_DIR$/cluster_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-          <folding>
-            <element signature="e#639#671#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,10 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1604986729450" expanded="true" signature="1055:1060" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,6 +711,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/help_us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="18" selection-start-line="5" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/contact_us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3648">
+          <caret line="152" column="22" selection-start-line="152" selection-start-column="20" selection-end-line="154" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/admin/our_team.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -744,52 +739,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/base.html">
+    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="52" column="56" lean-forward="true" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/help_us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="5" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/contact_us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="14" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/header2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="240">
+          <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cluster/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="720">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
           <folding>
-            <element signature="e#0#64#0" expanded="true" />
-            <marker date="1604989424652" expanded="true" signature="717:718" ph="..." />
-            <marker date="1604989424652" expanded="true" signature="2561:2563" ph="..." />
-            <marker date="1604989424652" expanded="true" signature="3731:4115" ph="..." />
-            <marker date="1604989424652" expanded="true" signature="6277:6279" ph="..." />
+            <marker date="1605445745193" expanded="true" signature="6939:6941" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/logout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -803,17 +780,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/index.html">
+    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/header2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="152" column="22" lean-forward="true" selection-start-line="152" selection-start-column="20" selection-end-line="154" selection-end-column="26" />
+        <state relative-caret-position="408">
+          <caret line="17" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/products.html">
+    <entry file="file://$PROJECT_DIR$/cluster/templates/cluster/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
+        <state relative-caret-position="408">
+          <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
         </state>
       </provider>
     </entry>

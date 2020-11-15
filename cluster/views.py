@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import ListView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.db.models import Q
 # Create your views here.
 
 def home(request):
@@ -115,7 +116,6 @@ def login_view(request):
 
 	return render(request, 'cluster/admin/login.html')
 
-
 def updates(request):
 	a_form = ArticleForm()
 	p_form = ProductForm()
@@ -150,6 +150,24 @@ def add_member(request):
 
 	return render(request, 'cluster/admin/add_member.html')
 
+# def our_team(request):
+# 	form = OurTeamForm()
+# 	members = OurTeam.objects.all().order_by('-date')
+# 	page    = request.GET.get('page', 1)
+# 	paginator= Paginator(members, 10)
+# 	try:
+# 		users = paginator.page(page)
+# 	except PageNotAnInteger:
+# 		users = paginator(1)
+# 	except EmptyPage:
+# 		users = paginator.page(paginator.num_pages)
+# 	context = {
+# 		'members': members,
+# 		'page_obj': users,
+# 	}
+
+# 	return render(request, 'cluster/admin/our_team.html', context)
+
 def our_team(request):
 	form = OurTeamForm()
 	members = OurTeam.objects.all().order_by('-date')
@@ -161,12 +179,20 @@ def our_team(request):
 		users = paginator(1)
 	except EmptyPage:
 		users = paginator.page(paginator.num_pages)
+	
+	query = request.GET.get('search')
+	
+	if query:
+		members = OurTeam.objects.filter(Q(name__icontains=query)|
+			Q(designation__icontains=query))
+		
 	context = {
-		'members': members,
-		'page_obj': users,
+		#'members': members,
+		'page_obj': members,
 	}
-
+	
 	return render(request, 'cluster/admin/our_team.html', context)
+
 
 
 class OurTeamUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):

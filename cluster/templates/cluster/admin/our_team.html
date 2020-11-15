@@ -14,7 +14,7 @@
     </div>
 {% endif %}
    <section class="section-form">
-     <form method='get' action='our-team-search/' class="contact-form">
+     <form method='get'  class="contact-form">
          <div class="row">
              <div class="col span-2-of-3">
                  <input type="text" name="search" id="search" placeholder="Search" required>
@@ -26,8 +26,10 @@
      </form>
    </section>
     <div class="row">
+    	<a href="{% url 'our_team'%}">
         <h2>All Team Members</h2>
-         <div class="row js--wp-3">
+    </a>
+         <div class="row ">
         {% for member in page_obj %}
                 <div class="row">
                     <div class="profile-box">
